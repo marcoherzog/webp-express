@@ -2,15 +2,6 @@
 
 namespace WebPExpress;
 
-use \WebPExpress\ConvertersHelper;
-use \WebPExpress\FileHelper;
-use \WebPExpress\HTAccess;
-use \WebPExpress\Messenger;
-use \WebPExpress\Paths;
-use \WebPExpress\State;
-use \WebPExpress\TestRun;
-use \WebPExpress\Option;
-
 class Config
 {
 
@@ -270,7 +261,9 @@ class Config
             'passThroughHeaderWorking' => HTAccessCapabilityTestRunner::passThroughHeaderWorking(),
             'passThroughEnvWorking' => HTAccessCapabilityTestRunner::passThroughEnvWorking(),
             'modHeaderWorking' => HTAccessCapabilityTestRunner::modHeaderWorking(),
-            'grantAllAllowed' => HTAccessCapabilityTestRunner::grantAllAllowed(),
+            //'grantAllAllowed' => HTAccessCapabilityTestRunner::grantAllAllowed(),
+            'canRunTestScriptInWOD' => HTAccessCapabilityTestRunner::canRunTestScriptInWOD(),
+            'canRunTestScriptInWOD2' => HTAccessCapabilityTestRunner::canRunTestScriptInWOD2(),
         ];
     }
 
@@ -647,10 +640,10 @@ class Config
         if ($forceRuleUpdating) {
             $rewriteRulesNeedsUpdate = true;
         } else {
-            $rewriteRulesNeedsUpdate = HTAccess::doesRewriteRulesNeedUpdate($config);
+            $rewriteRulesNeedsUpdate = HTAccessRules::doesRewriteRulesNeedUpdate($config);
         }
 
-        if (!isset($config['base-htaccess-on-these-capability-tests'])) {
+        if (!isset($config['base-htaccess-on-these-capability-tests']) || $rewriteRulesNeedsUpdate) {
             self::runAndStoreCapabilityTests($config);
         }
 
