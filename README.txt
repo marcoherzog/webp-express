@@ -1,10 +1,10 @@
 === WebP Express ===
 Contributors: rosell.dk
-Donate link: https://wordpress.org/plugins/webp-express/#%0Ahow%20do%20i%20buy%20you%20a%20cup%20of%20coffee%3F%0A
+Donate link: https://ko-fi.com/rosell
 Tags: webp, images, performance
 Requires at least: 4.0
 Tested up to: 5.5
-Stable tag: 0.18.2
+Stable tag: 0.19.0
 Requires PHP: 5.6
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -91,7 +91,7 @@ If you do not have quality detection working, you can try one of the following:
 ### Verifying that it works (in "Varied image responses" mode)
 1. Make sure at least one of the conversion methods are working. It should have a green checkmark next to it.
 2. If you haven't saved yet, click "Save settings". This will put redirection rules into .htaccess files in the relevant directories (typically in uploads, themes and wp-content/webp-express/webp-images, depending on the "Scope" setting)
-3. I assume that you checked at least one of the checkboxes in the .htaccess rules section - otherwise you might as well change to "CDN friendly" mode. The first
+3. I assume that you checked at least one of the two first checkboxes in the .htaccess rules section. Otherwise you aren't using "varied responses", and then the "CDN friendly" mode will be more appropriate.
 4. Click the "Live test" buttons to see that the enabled rules actually are working. If they are not, it *could* be that the server needs a little time to recognize the changed rules.
 
 The live tests are quite thorough and I recommend them over a manual test. However, it doesn't hurt to do a manual inspection too.
@@ -136,18 +136,21 @@ Bread on the table don't come for free, even though this plugin does, and always
 * [Mathieu Gollain-Dupont](https://www.linkedin.com/in/mathieu-gollain-dupont-9938a4a/)
 * Ruben Solvang
 
-**Persons who contributed with coffee within the last 30 days (updated biweekly) - Thanks! **
+**Persons who contributed with ko-fi within the last 30 days (updated biweekly) - Thanks! **
 
-* Katja
-* Devashish Datt Mamgain
-* RobMoore
+* 10 Nov: Bill Vallance
+* 5 Nov: Steve from Oz
+* 31 Oct: Mark from Portland, OR
+* 27 Oct: Pradeep Maheepala from Watford, UK
+* 13 Oct: Anonymous
 
 **Persons who contributed with extra generously amounts of coffee / lifetime backing (>30$) - thanks!:**
 
 * Justin - BigScoots ($105)
+* Bill Vallance ($102)
 * Sebastian ($99)
 * Tammy Lee ($90)
-* Max Kreminsky ($70)
+* Max Kreminsky ($80)
 * Steven Sullivan ($51)
 
 == Frequently Asked Questions ==
@@ -733,6 +736,27 @@ If you want to make sure that my coffee supplies don't run dry, you can even buy
 
 == Changelog ==
 
+= 0.19.0 =
+*(released: 12 Nov 2020)*
+* New convertion method: ffmpeg
+
+For more info, see the closed issues on the [0.19.0 milestone on the github repository](https://github.com/rosell-dk/webp-express/milestone/36?closed=1)
+
+= 0.18.3 =
+*(released: 5 Nov 2020)*
+* Bugfix: WebP Express uses live tests to determine the capabilities of the server in respect to .htaccess files (using the htaccess-capability-tester library). The results are used for warnings and also for optimizing the rules in the .htaccess files. However, HTTP Requests can fail due to other reasons than the feature not working (ie timeout). Such failures should lead to an indeterminate result, but it was interpreted as if the feature was not working.
+* The Live test now displays a bit more information if the HTTP request failed.
+* Changed default value for "destination structure" to "Image roots", as "Document root" doesn't work on hosts that have defined DOCUMENT_ROOT in an unusual way.
+* Added possibility to change "%{DOCUMENT_ROOT}" part of RewriteCond by adding a line to wp-config.php. THIS IS A BETA FEATURE AND MIGHT BE REVOKED IF NOBODY ACTUALLY NEEDS IT.
+* Got rid of PHP notice Constant WEBPEXPRESS_MIGRATION_VERSION already defined
+* Fixed donation link. It now points to https://ko-fi.com/rosell again
+
+For more info, see the closed issues on the [0.18.3 milestone on the github repository](https://github.com/rosell-dk/webp-express/milestone/34?closed=1)
+
+= 0.18.2 =
+*(released: 28 Sep 2020)*
+* Bugfix: Fixed error on the settings page on a handful of setups.
+
 = 0.18.1 =
 *(released: 24 Sep 2020)*
 * Bugfix: Bulk Convert failed to show list on systems that did not have the [utf8-encode()](https://www.php.net/manual/en/function.utf8-encode.php) function.
@@ -1179,6 +1203,12 @@ For more info, see the closed issues on the 0.5.0 milestone on our github reposi
 For older releases, check out changelog.txt
 
 == Upgrade Notice ==
+
+= 0.19.0 =
+* Added new conversion method (ffmpeg)
+
+= 0.18.3 =
+* Minor fixes (see changelog)
 
 = 0.18.2 =
 * Fixed bug on settings page

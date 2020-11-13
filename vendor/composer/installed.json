@@ -129,6 +129,68 @@
         ]
     },
     {
+        "name": "onnov/detect-encoding",
+        "version": "v1.2.0",
+        "version_normalized": "1.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/onnov/detect-encoding.git",
+            "reference": "c88cea4f0c83d7f7e0675f2801e0995f328de1ce"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/onnov/detect-encoding/zipball/c88cea4f0c83d7f7e0675f2801e0995f328de1ce",
+            "reference": "c88cea4f0c83d7f7e0675f2801e0995f328de1ce",
+            "shasum": ""
+        },
+        "require": {
+            "ext-iconv": "*",
+            "php": ">=7.2"
+        },
+        "require-dev": {
+            "infection/infection": "*",
+            "phpbench/phpbench": "*",
+            "phpcompatibility/php-compatibility": "*",
+            "phpmd/phpmd": "*",
+            "phpstan/phpstan": "*",
+            "phpstan/phpstan-strict-rules": "*",
+            "phpunit/phpunit": "*",
+            "roave/backward-compatibility-check": "*",
+            "squizlabs/php_codesniffer": "*"
+        },
+        "time": "2019-09-20T16:11:46+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Onnov\\DetectEncoding\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "onnov",
+                "email": "oblnn@yandex.ru"
+            }
+        ],
+        "description": "Text encoding definition class instead of mb_detect_encoding. Defines: utf-8, windows-1251, koi8-r, iso-8859-5, ibm866, .....",
+        "homepage": "https://github.com/onnov/detect-encoding",
+        "keywords": [
+            "cyrillic",
+            "encoding",
+            "ibm866",
+            "iconv",
+            "iso-8859-5",
+            "koi8-r",
+            "mb_detect_encoding",
+            "utf-8",
+            "windows-1251"
+        ]
+    },
+    {
         "name": "rosell-dk/dom-util-for-webp",
         "version": "0.4.0",
         "version_normalized": "0.4.0.0",
@@ -190,17 +252,17 @@
     },
     {
         "name": "rosell-dk/htaccess-capability-tester",
-        "version": "0.8",
-        "version_normalized": "0.8.0.0",
+        "version": "0.9",
+        "version_normalized": "0.9.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/rosell-dk/htaccess-capability-tester.git",
-            "reference": "3556f664c5533643c0cb0beceaf1947abd7aed7a"
+            "reference": "2eb2cf38a9f42fc3aa647d6e9c896e124bfebf4c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/rosell-dk/htaccess-capability-tester/zipball/3556f664c5533643c0cb0beceaf1947abd7aed7a",
-            "reference": "3556f664c5533643c0cb0beceaf1947abd7aed7a",
+            "url": "https://api.github.com/repos/rosell-dk/htaccess-capability-tester/zipball/2eb2cf38a9f42fc3aa647d6e9c896e124bfebf4c",
+            "reference": "2eb2cf38a9f42fc3aa647d6e9c896e124bfebf4c",
             "shasum": ""
         },
         "require": {
@@ -214,7 +276,7 @@
         "suggest": {
             "php-stan/php-stan": "Suggested for dev, in order to analyse code before committing"
         },
-        "time": "2020-09-23T10:46:34+00:00",
+        "time": "2020-11-04T10:29:38+00:00",
         "type": "library",
         "extra": {
             "scripts-descriptions": {
@@ -309,17 +371,17 @@
     },
     {
         "name": "rosell-dk/webp-convert",
-        "version": "2.3.2",
-        "version_normalized": "2.3.2.0",
+        "version": "2.4.0",
+        "version_normalized": "2.4.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/rosell-dk/webp-convert.git",
-            "reference": "5da7989e87cc0b6c61a5fd73262ed28999be27ab"
+            "reference": "187a578ee55730f7a128a2f07b4351524b10d47b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/rosell-dk/webp-convert/zipball/5da7989e87cc0b6c61a5fd73262ed28999be27ab",
-            "reference": "5da7989e87cc0b6c61a5fd73262ed28999be27ab",
+            "url": "https://api.github.com/repos/rosell-dk/webp-convert/zipball/187a578ee55730f7a128a2f07b4351524b10d47b",
+            "reference": "187a578ee55730f7a128a2f07b4351524b10d47b",
             "shasum": ""
         },
         "require": {
@@ -337,7 +399,7 @@
             "ext-vips": "to use Vips extension for converting.",
             "php-stan/php-stan": "Suggested for dev, in order to analyse code before committing"
         },
-        "time": "2020-04-18T14:41:50+00:00",
+        "time": "2020-11-10T11:24:50+00:00",
         "type": "library",
         "extra": {
             "scripts-descriptions": {

@@ -12,6 +12,10 @@ class ComposerStaticInit16597e36dd1bfcd787ed5a8e6d908243
             'WebPConvert\\' => 12,
             'WebPConvertCloudService\\' => 24,
         ),
+        'O' => 
+        array (
+            'Onnov\\DetectEncoding\\' => 21,
+        ),
         'I' => 
         array (
             'ImageMimeTypeGuesser\\' => 21,
@@ -38,6 +42,10 @@ class ComposerStaticInit16597e36dd1bfcd787ed5a8e6d908243
         'WebPConvertCloudService\\' => 
         array (
             0 => __DIR__ . '/..' . '/rosell-dk/webp-convert-cloud-service/src',
+        ),
+        'Onnov\\DetectEncoding\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/onnov/detect-encoding/src',
         ),
         'ImageMimeTypeGuesser\\' => 
         array (
@@ -189,6 +197,8 @@ class ComposerStaticInit16597e36dd1bfcd787ed5a8e6d908243
         'ImageMimeTypeGuesser\\Detectors\\Stack' => __DIR__ . '/..' . '/rosell-dk/image-mime-type-guesser/src/Detectors/Stack.php',
         'ImageMimeTypeGuesser\\GuessFromExtension' => __DIR__ . '/..' . '/rosell-dk/image-mime-type-guesser/src/GuessFromExtension.php',
         'ImageMimeTypeGuesser\\ImageMimeTypeGuesser' => __DIR__ . '/..' . '/rosell-dk/image-mime-type-guesser/src/ImageMimeTypeGuesser.php',
+        'Onnov\\DetectEncoding\\CodePage' => __DIR__ . '/..' . '/onnov/detect-encoding/src/CodePage.php',
+        'Onnov\\DetectEncoding\\EncodingDetector' => __DIR__ . '/..' . '/onnov/detect-encoding/src/EncodingDetector.php',
         'WebPConvertCloudService\\AccessCheck' => __DIR__ . '/..' . '/rosell-dk/webp-convert-cloud-service/src/AccessCheck.php',
         'WebPConvertCloudService\\Serve' => __DIR__ . '/..' . '/rosell-dk/webp-convert-cloud-service/src/Serve.php',
         'WebPConvertCloudService\\WebPConvertCloudService' => __DIR__ . '/..' . '/rosell-dk/webp-convert-cloud-service/src/WebPConvertCloudService.php',
@@ -205,6 +215,7 @@ class ComposerStaticInit16597e36dd1bfcd787ed5a8e6d908243
         'WebPConvert\\Convert\\Converters\\ConverterTraits\\ExecTrait' => __DIR__ . '/..' . '/rosell-dk/webp-convert/src/Convert/Converters/ConverterTraits/ExecTrait.php',
         'WebPConvert\\Convert\\Converters\\Cwebp' => __DIR__ . '/..' . '/rosell-dk/webp-convert/src/Convert/Converters/Cwebp.php',
         'WebPConvert\\Convert\\Converters\\Ewww' => __DIR__ . '/..' . '/rosell-dk/webp-convert/src/Convert/Converters/Ewww.php',
+        'WebPConvert\\Convert\\Converters\\FFMpeg' => __DIR__ . '/..' . '/rosell-dk/webp-convert/src/Convert/Converters/FFMpeg.php',
         'WebPConvert\\Convert\\Converters\\Gd' => __DIR__ . '/..' . '/rosell-dk/webp-convert/src/Convert/Converters/Gd.php',
         'WebPConvert\\Convert\\Converters\\Gmagick' => __DIR__ . '/..' . '/rosell-dk/webp-convert/src/Convert/Converters/Gmagick.php',
         'WebPConvert\\Convert\\Converters\\GmagickBinary' => __DIR__ . '/..' . '/rosell-dk/webp-convert/src/Convert/Converters/GmagickBinary.php',
